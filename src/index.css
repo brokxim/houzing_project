@@ -9,11 +9,15 @@ body {
   margin: 0;
   padding: 0;
 }
-
+.active {
+  opacity: 0.7;
+}
 :root {
   /* color */
-  --colorprimary: #0d263b;
+  --colorPrimary: #0d263b;
   --colorSecondary: #696969;
   /* background */
   --backgroundPrimary: #0061df;
+  /* padding */
+  --padding: 0 130px;
 }
