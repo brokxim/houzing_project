@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
+import Filter from "../Filter";
 import { Button } from "../Generics/Button";
 import { Container, Main, Wrapper, Section, Logo, Link } from "./style";
 
@@ -33,12 +34,13 @@ const Home = () => {
             })}
           </Section>
           <Section>
-            <Button type="dark" onClick={() => navigate("/signin")}>
+            <Button type={"dark"} onClick={() => navigate("/signin")}>
               Sign in
             </Button>
           </Section>
         </Wrapper>
       </Main>
+      <Filter />
       <Outlet />
     </Container>
   );
