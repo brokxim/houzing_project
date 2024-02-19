@@ -9,12 +9,27 @@ import {
   Img,
 } from "./style";
 import noimg from "../../assets/img/noimg.jpeg";
-const HouseCard = ({ url, title, bad, bath, info, garage, ruler }) => {
+const HouseCard = (value) => {
+  const {
+    url,
+    title,
+    bad,
+    bath,
+    info,
+    garage,
+    ruler,
+    address,
+    city,
+    country,
+    description,
+  } = value;
   return (
     <Container>
       <Img src={url || noimg} />
       <Content>
-        <div className="subTitle">{title || "New apartment Nice view"}</div>
+        <div className="subTitle">
+          {city},{country},{description}
+        </div>
         <div className="info">{info || "Quincy St, Brooklyn, NY, USA"}</div>
         <Details>
           <Details.Item>
