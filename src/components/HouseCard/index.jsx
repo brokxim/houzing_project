@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+
 import {
   Container,
   Content,
@@ -9,52 +10,49 @@ import {
   Img,
 } from "./style";
 import noimg from "../../assets/img/noimg.jpeg";
-const HouseCard = (value) => {
+const HouseCard = (value = {}) => {
   const {
-    url,
-    title,
-    bad,
-    bath,
-    info,
-    garage,
-    ruler,
+    salePrice,
+    price,
     address,
     city,
     country,
     description,
+    houseDetails,
+    attachments,
   } = value;
   return (
     <Container>
-      <Img src={url || noimg} />
+      <Img src={(attachments && attachments[0]?.imgPath) || noimg} />
       <Content>
-        <div className="subTitle">
+        <div className="subTitle inline">
           {city},{country},{description}
         </div>
-        <div className="info">{info || "Quincy St, Brooklyn, NY, USA"}</div>
+        <div className="info">{address || "Quincy St, Brooklyn, NY, USA"}</div>
         <Details>
           <Details.Item>
             <Icons.Bed />
-            <div className="info">{bad || "Bad 1"}</div>
+            <div className="info">{houseDetails?.beds || 0}</div>
           </Details.Item>
           <Details.Item>
             <Icons.Bath />
-            <div className="info">{bath || "Bath 1"}</div>
+            <div className="info">{houseDetails?.bath || 0}</div>
           </Details.Item>
           <Details.Item>
             <Icons.Garage />
-            <div className="info">{garage || "Garage 1"}</div>
+            <div className="info">{houseDetails?.garage || 0}</div>
           </Details.Item>
           <Details.Item>
             <Icons.Ruler />
-            <div className="info">{ruler || "Ruler 1"}</div>
+            <div className="info">{houseDetails?.area || 0}kv</div>
           </Details.Item>
         </Details>
       </Content>
       <Divider />
       <Footer>
         <Details.Item>
-          <div className="info">$2.800/mo</div>
-          <div className="subTitle">$7.500/mo</div>
+          <div className="info">${salePrice & (salePrice + "/mo")}</div>
+          <div className="subTitle">${price || 0}/mo</div>
         </Details.Item>
         <Details.Item $footer={true}>
           <Icons.Resize />
