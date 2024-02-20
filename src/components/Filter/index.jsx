@@ -11,7 +11,7 @@ const Filter = () => {
   const location = useLocation();
   console.log(uzeReplace("address", "tashkent"));
   const onChange = ({ target: { name, value, placeholder } }) => {
-    console.log(name, value, placeholder, "query", query);
+    // console.log(name, value, placeholder, "query", query);
     navigate(`${location?.pathname}${uzeReplace(name, value)}`);
   };
   const countryRef = useRef();
