@@ -9,6 +9,8 @@ const Container = styled.div`
   padding-top: 10px;
   padding-bottom: 10px;
   gap: 20px;
+  max-width: 1440px;
+  margin: auto;
 `;
 const Icons = styled.div``;
 Icons.Houses = styled(houses)`
