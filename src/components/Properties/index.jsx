@@ -17,9 +17,10 @@ const Properties = () => {
   }, [search]);
   return (
     <Container>
-      {data?.map((value) => {
-        return <HouseCard data={value} />;
-      })}
+      {data &&
+        data?.map((value) => {
+          return <HouseCard data={value} />;
+        })}
     </Container>
   );
 };

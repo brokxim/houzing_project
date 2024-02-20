@@ -10,7 +10,7 @@ const Container = styled.div`
   padding-bottom: 10px;
   gap: 20px;
   max-width: 1440px;
-  // margin: auto;
+  margin: auto;
 `;
 const Icons = styled.div``;
 Icons.Houses = styled(houses)`
