@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   font-size: 16px;
   width: 100%;
   max-width: 1440px;
+  margin: auto;
 `;
 const Logo = styled(logoImg)`
   width: 30px;
