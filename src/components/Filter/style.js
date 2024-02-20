@@ -9,9 +9,6 @@ const Container = styled.div`
   padding-top: 10px;
   padding-bottom: 10px;
   gap: 20px;
-  margin: auto;
-  width: 100%;
-  max-width: 1440px;
 `;
 const Icons = styled.div``;
 Icons.Houses = styled(houses)`
@@ -25,6 +22,10 @@ Icons.Search = styled(search)`
 `;
 const MenuWrapper = styled.div`
   padding: 30px;
+  // padding: ${({ x }) => x && "30px 30px 0 30px"};
+  // padding: ${({ y }) => y && "0 30px 0 30px"};
+  // padding: ${({ z }) => z && "0 30px 30px 30px"};
+
   background: white;
 `;
 

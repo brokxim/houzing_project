@@ -7,9 +7,9 @@ const Container = styled.input`
   border-radius: 2px;
   min-width: 120px;
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : "14px")};
+  height: ${({ height }) => (height ? `${height}px` : "42px")};
   width: ${({ width }) => (width ? `${width}px` : "100%")};
   padding-left: ${({ $icon }) => ($icon ? "35px" : "20px")};
-  height: ${({ height }) => (height ? `${height}px` : "42px")};
   border: 1px solid #e6e9ec;
   outline: none;
   &:active {
