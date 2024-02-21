@@ -5,6 +5,8 @@ const Container = styled.div`
   padding: var(--padding);
   gap: 20px;
   justify-content: space-between;
-  // maw-width:1440px;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
 `;
 export { Container };
