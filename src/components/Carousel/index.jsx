@@ -33,7 +33,7 @@ const GenCarousel = () => {
         <Content.Price>5.250 / monthly</Content.Price>
       </Content>
       <Arrow data-name="left" onClick={onMove} left={"left"} />
-      <Arrow onClick={onMove} name="right" />
+      <Arrow onClick={onMove} data-name="right" />
     </Container>
   );
 };

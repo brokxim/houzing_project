@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap");
+
 body {
   font-family: "Montserrat", sans-serif;
   /* overflow-x: hidden; */
@@ -47,4 +48,20 @@ body {
   display: flex;
   overflow: hidden;
   white-space: nowrap;
+}
+.slick-next:before,
+.slick-prev:before {
+  color: black;
+  font-size: 25px;
+}
+.ant-select-single,
+.ant-select-selector {
+  height: 44px;
+  border-radius: unset !important;
+  outline: none !important;
+}
+/* .ant-select-single, */
+/* .ant-select-show-arrow, */
+.ant-select-selection-item {
+  width: 205px !important;
 }
